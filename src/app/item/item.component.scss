@@ -1,0 +1,186 @@
+$fontTitle: 'Russo One', sans-serif;
+$fontNormal: 'Sriracha', cursive; 
+
+$color1: #222;
+$color2: #caf0f8;
+$color3: #48cae4;
+$color4: #0096c7;
+$color5: #03045e;
+
+
+$sizeTitle: 48px;
+$sizeNormal: 18px;
+
+$padding: 2%;
+$separation: 2%;
+
+/********************/
+
+
+section{
+    border-radius: 5px;
+    list-style: none;
+    
+    h2{
+        font-family: $fontTitle;
+        padding: $padding;
+    }
+
+    figure{
+        text-align: center;
+        padding: $padding;
+        img{
+            margin: auto;
+            width: 50%;
+            border-radius: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+        }img:hover{
+            cursor: pointer;
+        }
+        caption{
+            text-align: center;
+        }
+    }
+
+    p, caption{
+        color: #48cae4;
+        font-family: $fontNormal;
+    }button{
+        outline: none;
+        width: 200px;
+        font-size: 18px;
+        border-radius: 2px;
+        border-style: none;
+        background-color: $color4;
+        transition-duration: 0.6s;
+        color: $color1;
+        font-family: $fontNormal;
+        box-shadow:  -1px -1px 0px #424141;
+        text-shadow: 1px 1px 1px white;
+    }button:hover{
+        cursor: pointer;
+        animation-name: plussize;
+        animation-duration: 1s;
+        transform: scale(1.1);
+        box-shadow:  -3px -3px 0px #424141;
+        color: white;
+        text-shadow: 1px 1px 1px $color1;
+        font-size: 19px;
+        background-color: #6bd5f5;
+        cursor: pointer;
+    }
+    button:after{
+        content: "$";
+        z-index: 1;
+        transition-duration: 0.5s;
+        text-shadow: 0px 0px 0px transparent;
+        color: transparent;
+    }
+    button:hover::after{
+        color: #3e9c35;
+        text-shadow: 1px 1px 1px $color1;
+        font-size: 20px;
+    }
+
+    button:before{
+        content: "👟";
+        z-index: 1;
+        transition-duration: 5s;
+        text-shadow: 0px 0px 0px transparent;
+        color: transparent;
+    }
+    button:hover::before{
+        text-shadow: 1px 1px 1px $color1;
+        font-size: 20px;
+        position: absolute;
+        animation: 
+        flyshoe 2.1s ease-in-out 0.5s 1 normal;
+        animation-fill-mode: forwards;
+    }
+
+
+}
+
+$value1: -20px;
+$value2: 5px;
+
+@keyframes flyshoe{
+    0%{
+        color: white;
+    }
+    5%{ transform: translate(120px, $value1);
+    }
+    10%{ transform: translate(140px, $value2);}
+    20%{ transform: translate(145px, $value1);}
+    25%{ transform: translate(150px, $value2);}
+    30%{ transform: translate(160px, $value1);}
+    35%{ transform: translate(175px, $value2);}
+    40%{ transform: translate(200px, $value1);}
+    45%{ transform: translate(210px, $value2);}
+    50%{ transform: translate(220px, $value1);}
+    55%{ transform: translate(230px, $value2);}
+    60%{ transform: translate(240px, $value1);}
+    65%{ transform: translate(250px, $value2);}
+    70%{ transform: translate(260px, $value1);}
+    75%{ transform: translate(270px, $value2);}
+    80%{ transform: translate(280px, $value1);}
+    85%{
+        transform: translate(290px, $value2);
+    }
+    90%{ transform: translate(300px, $value1);}
+    95%{ transform: translate(310px, $value2);}
+    98%{ transform: translate(340px, $value1);}
+    99%{ transform: translate(340px, $value2);}
+    100%{ transform: translate(360px, $value2); color: white;}
+}
+
+#nItems{
+    margin-right: 20px;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 20px;
+    font-family: $fontNormal;
+    color: $color4;
+    outline: none;
+    width: 6%;
+    text-align: center;
+    box-shadow: 1px 1px 1px rgba(34, 34, 34, 0.705);
+    text-shadow: 1px 1px 1px #222;
+}
+
+.nm{
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 120px;
+    padding: $padding;
+    border-radius: 79px;
+    background: #e0e7eb;
+    box-shadow: inset -5px 5px 1px #9b9fa2, inset 5px -5px 1px #ffffff;
+}
+
+
+
+.icon{
+    width: 30px;
+}
+
+.backButton{
+    outline: none;
+    border-radius: 20px;
+    border-style: none;
+    background-color: $color1;
+    color: white;
+    margin: $separation;
+    float: left;
+    transition-duration: 0.5s;
+}.backButton:hover{
+    transform: scale(1.1);
+    color: $color3;
+}
+
+.price{
+    color: #3e9c35;
+    font-size: 20px;
+}

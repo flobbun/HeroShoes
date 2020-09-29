@@ -1,0 +1,17 @@
+/********************************/
+#mainFooter {
+  margin-top: 10%;
+  background-color: #222;
+  color: white;
+  font-family: "Sriracha", cursive;
+  overflow: hidden;
+  height: 50px;
+  border-radius: 1000px 1000px 0px 0px;
+  width: 100%;
+  position: relative;
+  list-style: none;
+  background: #222;
+  box-shadow: inset 7px 7px 10px #222, inset -7px -7px 10px #111;
+  padding: 2%; }
+
+/*# sourceMappingURL=f.css.map */

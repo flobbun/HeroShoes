@@ -1,0 +1,31 @@
+<div class="container col-md-10">
+
+    <div class="container" title="Go Back">
+        <a routerLink="/catalogue">
+            <button class="backButton">
+                <i class="fas fa-arrow-circle-left"></i>
+            </button>
+        </a>
+    </div>
+
+    <div class="container">
+        <section class="nm">
+
+            <div class="container animate__animated animate__slideInLeft">
+                <h2> {{shoes.name}} <span class="price"> {{shoes.price}}$ </span></h2> 
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quidem repellendus dolorum numquam similique, ipsam nihil vel incidunt, tempore hic maxime! Nemo id illo vitae et maxime corrupti voluptatem deleniti.</p>
+                <figure>
+                    <img src={{shoes.img}} alt="">
+                </figure>
+
+                <div class="row justify-content-center">
+                    <input #nItems type="number" name="nItems" id="nItems" value="1" min="1" max="50">
+                    <button (click)="addItem()" id="eight">Add to cart <span id="eight_span"></span> <img class="icon" src="assets/img/cart.png" alt=""></button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+</div>
+

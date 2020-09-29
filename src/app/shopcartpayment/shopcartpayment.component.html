@@ -1,0 +1,15 @@
+<section class="container">
+    <div class="nm container">
+        <h2> Shopping Cart <img class="icon" src="assets/img/cart.png" alt=""></h2>
+        <ul>
+            <li #item class="nm2" *ngFor="let item of cart">
+                <span id="miniShoe">👟</span> 
+                <div class="row">
+                    <h2>{{item.name}} <span class="price">{{item.price}}$</span></h2> 
+                    <img src="{{item.img}}" alt="">
+                </div>
+                <button (click)="removeItem()" id="bRemove" title="Remove item">✘</button>
+            </li>
+        </ul>
+    </div>    
+</section>

@@ -1,0 +1,116 @@
+$fontTitle: 'Russo One', sans-serif;
+$fontNormal: 'Sriracha', cursive; 
+
+$color1: #222;
+$color2: #caf0f8;
+$color3: #48cae4;
+$color4: #0096c7;
+$color5: #03045e;
+
+
+$sizeTitle: 48px;
+$sizeNormal: 18px;
+
+$padding: 2%;
+$separation: 2%;
+
+/*-------------*/
+@keyframes glowing {
+    0% { background-position: 0 0; 
+    background-color: #222;
+
+    }
+    10%{
+        background-color: rgb(46, 46, 46);
+        border-color: #111;
+    }
+    20%{
+        background-color: rgb(32, 32, 32);
+        border-color: #222;
+        color: $color2;
+    }
+    30%{
+        background-color: rgb(31, 27, 27);
+        text-shadow: 3px 3px 3px black;
+        transform: scale(1.1);
+        color: $color3;
+
+    }
+    50% { background-position: 400% 0; 
+        background-color: rgb(31, 30, 30);
+        color: $color4;
+    }
+    100% { background-position: 0 0; 
+        background-color: rgb(26, 25, 25);
+    }
+}
+
+
+
+
+
+#mainHeader{
+    background-color: #222;
+    color: white;
+    font-family: $fontNormal;
+    overflow: hidden;
+    height: 120px;
+    border-radius: 0px 0px 1000px 1000px;
+
+    box-shadow: inset 7px 7px 10px #222, 
+    inset -7px -7px 10px #111;
+    padding: $padding;
+
+
+
+    h1{
+        color: $color4;
+        font-family: $fontTitle;
+        margin-left: $separation;
+        margin-right: $separation;
+        text-shadow: 1px 5px black;
+        font-size: $sizeTitle;
+    }
+
+    ul{
+        text-align: center;
+        width: 50%;
+        margin: auto;
+
+        li{
+            width: 100px;
+            background-color: #222;
+            box-shadow: 1px 1px 1px #111;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: $sizeNormal;
+            display: inline-flex;
+            margin: $separation;
+            transition-duration: 0.6s;
+            a, a:visited{
+                padding: $padding;
+                margin: auto;
+                color: inherit;
+                text-decoration: none;
+            }
+        }li:hover{
+            box-shadow:  -1px -1px 0px #424141;
+            animation: glowing 2s 0s;
+            color: $color4;
+            text-shadow: 1px 1px 1px $color5;
+            font-size: 19px;
+            cursor: pointer;
+        }
+        
+    }
+
+}
+
+
+
+
+
+/*****Custom Classes*******/
+.icon{
+    width: 60px;
+}

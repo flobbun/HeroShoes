@@ -1,0 +1,22 @@
+<div id="superContainer" class="container-fluid">
+        
+<!----Header----> 
+<div id="mainHeader">
+    <app-header></app-header>
+    <ng-container *ngIf="cart.length > 0">
+        <app-shopcart></app-shopcart>
+    </ng-container>
+
+</div>
+            
+<!----Content---->
+<router-outlet></router-outlet>
+
+<!----Footer---->
+<div id="mainFooter">
+    <app-footer></app-footer>
+</div>
+
+
+
+</div>

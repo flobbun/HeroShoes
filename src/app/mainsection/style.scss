@@ -1,0 +1,63 @@
+$fontTitle: 'Russo One', sans-serif;
+$fontNormal: 'Sriracha', cursive; 
+
+$color1: #222;
+$color2: #caf0f8;
+$color3: #48cae4;
+$color4: #0096c7;
+$color5: #03045e;
+
+
+$sizeTitle: 48px;
+$sizeNormal: 18px;
+
+$padding: 2%;
+$separation: 2%;
+
+/********************/
+
+section{
+    border-radius: 5px;
+    list-style: none;
+    
+    h3{
+        font-family: $fontTitle;
+        padding: $padding;
+    }
+
+    figure{
+        text-align: center;
+        padding: $padding;
+        img{
+            margin: auto;
+            width: 50%;
+            border-radius: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+        }img:hover{
+            cursor: pointer;
+        }
+        caption{
+            text-align: center;
+        }
+    }
+
+    p, caption{
+        color: #48cae4;
+        font-family: $fontNormal;
+    }
+}
+
+
+
+
+.nm{
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 120px;
+    padding: $padding;
+    border-radius: 79px;
+    background: #e0e7eb;
+    box-shadow: inset -5px 5px 1px #9b9fa2, inset 5px -5px 1px #ffffff;
+}

@@ -1,0 +1,72 @@
+/*-------------*/
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+    background-color: #222; }
+  10% {
+    background-color: #2e2e2e;
+    border-color: #111; }
+  20% {
+    background-color: #202020;
+    border-color: #222;
+    color: #caf0f8; }
+  30% {
+    background-color: #1f1b1b;
+    text-shadow: 3px 3px 3px black;
+    transform: scale(1.1);
+    color: #48cae4; }
+  50% {
+    background-position: 400% 0;
+    background-color: #1f1e1e;
+    color: #0096c7; }
+  100% {
+    background-position: 0 0;
+    background-color: #1a1919; } }
+#mainHeader {
+  background-color: #222;
+  color: white;
+  font-family: "Sriracha", cursive;
+  overflow: hidden;
+  height: 120px;
+  border-radius: 0px 0px 1000px 1000px;
+  box-shadow: inset 7px 7px 10px #222, inset -7px -7px 10px #111;
+  padding: 2%; }
+  #mainHeader h1 {
+    color: #0096c7;
+    font-family: "Russo One", sans-serif;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-shadow: 1px 5px black;
+    font-size: 48px; }
+  #mainHeader ul {
+    text-align: center;
+    width: 50%;
+    margin: auto; }
+    #mainHeader ul li {
+      width: 100px;
+      background-color: #222;
+      box-shadow: 1px 1px 1px #111;
+      border-radius: 10px;
+      padding: 5px;
+      font-size: 18px;
+      display: inline-flex;
+      margin: 2%;
+      transition-duration: 0.6s; }
+      #mainHeader ul li a, #mainHeader ul li a:visited {
+        padding: 2%;
+        margin: auto;
+        color: inherit;
+        text-decoration: none; }
+    #mainHeader ul li:hover {
+      box-shadow: -1px -1px 0px #424141;
+      animation: glowing 2s 0s;
+      color: #0096c7;
+      text-shadow: 1px 1px 1px #03045e;
+      font-size: 19px;
+      cursor: pointer; }
+
+/*****Custom Classes*******/
+.icon {
+  width: 60px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row nm2 justify-content-center">
+        <input type="search" spellcheck="false" autocomplete="none" name="searchbar" #searchbar id="searchbar" placeholder="Search..." [(ngModel)]="filterSearch"><button id="bSearch" #bSearch>🔍</button>
+        <div *ngIf="cart.length === 0">
+            <img class="icon nm" src="assets/img/cart.png" alt="" routerLink="/shopcartpayment">
+        </div>
+    </div>
+
+
+
+    <section class="row nm">
+
+        <div *ngFor="let shoe of shoes | filter:filterSearch, index as i " class="p-4">
+            <div class="container">
+                <h2> {{shoe.name}} <small class="price">{{shoe.price}}$</small></h2>
+                <img src={{shoe.img}} [routerLink]="['/item',i]" alt="">
+            </div>
+        </div>
+
+        
+    </section>
+</div>

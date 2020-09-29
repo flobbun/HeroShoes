@@ -1,0 +1,80 @@
+$fontTitle: 'Russo One', sans-serif;
+$fontNormal: 'Sriracha', cursive; 
+
+$color1: #222;
+$color2: #caf0f8;
+$color3: #48cae4;
+$color4: #0096c7;
+$color5: #03045e;
+
+
+$sizeTitle: 48px;
+$sizeNormal: 18px;
+
+$padding: 2%;
+$separation: 2%;
+
+
+.nm2{
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 60px;
+    padding: 10px;
+    border-radius: 9px 9px 79px 79px;
+    background: rgba(34, 34, 34, 0.849);
+    
+    box-shadow: inset 7px 7px 10px #222, 
+    inset -7px -7px 10px #111;
+    padding-bottom: 60px;
+    width: 80%;
+
+
+    h1{
+        color: $color4;
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 1px 2px 2px $color1;
+
+        .icon{
+            overflow: hidden;
+            width: 45px;
+            padding: 10px;
+            margin: 4px;
+            box-shadow: inset -2px 2px 2px #151616e3, inset 2px -1px 1px #0f0f0fe3;
+            transition-duration: 0.5s;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.76);
+
+        }
+        .icon:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            background-color: #2b2c2ca9;
+            box-shadow: inset -2px 2px 2px white, inset 2px -1px 1px white;
+            background-color: transparent;
+            color: white;
+        }
+
+        #counter{
+            background-color: #2b2c2c6e;
+            position: absolute;
+            border-radius: 20px;
+            padding: 5px;
+            color: white;
+            font-size: 20px;
+            font-family: $fontNormal;
+            text-shadow: 2px 2px 2px rgb(0, 0, 0);
+
+            small{
+                color: #0096c7;
+            }
+        }
+    }
+}
+
+
+            
+.price{
+    color: $color4;
+}

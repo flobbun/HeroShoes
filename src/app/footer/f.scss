@@ -1,0 +1,36 @@
+$fontTitle: 'Russo One', sans-serif;
+$fontNormal: 'Sriracha', cursive; 
+
+$color1: #222;
+$color2: #caf0f8;
+$color3: #48cae4;
+$color4: #0096c7;
+$color5: #03045e;
+
+
+$sizeTitle: 48px;
+$sizeNormal: 18px;
+
+$padding: 2%;
+$separation: 2%;
+
+/********************************/
+
+#mainFooter{
+    margin-top: 10%;
+    background-color: #222;
+    color: white;
+    font-family: $fontNormal;
+    overflow: hidden;
+    height: 50px;
+    border-radius: 1000px 1000px 0px 0px ;
+    width: 100%;
+    position: relative;
+    list-style: none;
+
+    background: #222;
+    box-shadow: inset 7px 7px 10px #222, 
+    inset -7px -7px 10px #111;
+    padding: $padding;
+
+}
