@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import * as globalVars from 'src/assets/globalVars';
+import { Subscription, Observable, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-shopcart',
@@ -10,11 +11,15 @@ export class ShopcartComponent implements OnInit {
 
 cart: any[];
 
-  constructor() { 
-  }
+  constructor() {
 
-  ngOnInit(): void {
     this.cart = globalVars.cart;
+
+   }
+
+  ngOnInit(): void {  
+
+
   }
 
 }

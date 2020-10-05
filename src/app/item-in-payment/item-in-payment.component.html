@@ -1,0 +1,8 @@
+<li #item class="nm2 p-4" *ngIf="shoe !== null">
+    <span id="miniShoe">👟</span> 
+    <div class="row">
+        <h2>{{shoe.name}} <span class="price">{{shoe.price}}$</span></h2> 
+        <img src="{{shoe.img}}" alt="">
+    </div>
+    <button (click)="removeItem()" #bRemove id="bRemove" title="Remove item">✘</button>
+</li>

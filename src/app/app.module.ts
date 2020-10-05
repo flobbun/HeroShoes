@@ -2,13 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
-import { environment } from '../environments/environment';
 
 // Services
 import { ShoesService } from './services/shoes.service';
@@ -26,6 +21,7 @@ import { ItemComponent } from './item/item.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ShopcartComponent } from './shopcart/shopcart.component';
 import { ShopcartpaymentComponent } from './shopcartpayment/shopcartpayment.component';
+import { ItemInPaymentComponent } from './item-in-payment/item-in-payment.component';
 
 @NgModule({
   declarations: [
@@ -38,14 +34,12 @@ import { ShopcartpaymentComponent } from './shopcartpayment/shopcartpayment.comp
     ItemComponent,
     FilterPipe,
     ShopcartComponent,
-    ShopcartpaymentComponent
+    ShopcartpaymentComponent,
+    ItemInPaymentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAnalyticsModule,
-    AngularFirestoreModule,
     HttpClientModule,
     FormsModule
   ],

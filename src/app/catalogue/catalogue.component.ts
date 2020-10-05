@@ -10,7 +10,6 @@ import * as globalVars from 'src/assets/globalVars';
 export class CatalogueComponent implements OnInit {
 
 shoes: any[];
-cart: any[];
 filterSearch = '';
 
 
@@ -23,7 +22,6 @@ filterSearch = '';
     this._service.getShoes()
     .subscribe((res: any) => {
       this.shoes = res;
-      this.cart = globalVars.cart;
     });
 
 

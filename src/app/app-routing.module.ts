@@ -10,12 +10,11 @@ import { ShopcartpaymentComponent } from './shopcartpayment/shopcartpayment.comp
 /*------Routes------*/
 const routes: Routes = [
   {path: 'home', component: MainsectionComponent},
-  {path: '', component: MainsectionComponent},
   {path: 'catalogue', component: CatalogueComponent},
   {path: 'us', component: UsComponent},
   {path: 'shopcartpayment', component: ShopcartpaymentComponent},
   {path: 'item/:id', component: ItemComponent},
-  {path: '**', component: MainsectionComponent},
+  {path: '**', pathMatch: 'full', redirectTo: 'home'},
 
 ];
 /*----------------*/

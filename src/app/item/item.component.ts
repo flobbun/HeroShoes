@@ -28,16 +28,19 @@ export class ItemComponent implements OnInit {
     for (let i = 0; i < value; i++) {
       this.cart.push(this.shoes);
     }
-    console.log(this.cart);
+    console.log('CART> ', this.cart);
+    console.log('globalCART> ', globalVars.cart);
   }
 
-  constructor(private route: ActivatedRoute, private _service: ShoesService, private renderer: Renderer2) { }
+  constructor(private route: ActivatedRoute, private _service: ShoesService) { }
 
 
   ngOnInit(): void {
 
 
     this.cart = globalVars.cart;
+    console.log('CART> ', this.cart);
+    console.log('globalCART> ', globalVars.cart);
 
     this.route.params.subscribe(params=>{
       this._service.getShoes()

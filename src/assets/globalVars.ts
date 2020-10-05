@@ -1,8 +1,9 @@
-// 
-// ===== File globals.ts  
-// 
-'use strict'; 
+'use strict';
 
-export const dev = "Jhon Aguiar";
-export const title = "HeroShoes";
-export let cart = []; 
+
+export const dev = 'Jhon Aguiar';
+export const title = 'HeroShoes';
+export let cart = [];
+
+
+

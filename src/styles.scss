@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+$color1: #222;
+$color4: #0095c7b4;
+
 body{
     background-position: center;
     background-attachment: fixed;
@@ -6,7 +10,14 @@ body{
     transition: all 1s ease-in-out;
     background-image: url('assets/img/bg1.jpg');
 }
-
+body::-webkit-scrollbar{
+    width: 7px;
+    background: $color1;
+}
+body::-webkit-scrollbar-thumb{
+    background: $color4;
+    border-radius: 20px;
+}
 
 @keyframes fadein
 {

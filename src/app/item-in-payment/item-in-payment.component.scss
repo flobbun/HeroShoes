@@ -1,0 +1,90 @@
+$fontTitle: 'Russo One', sans-serif;
+$fontNormal: 'Sriracha', cursive; 
+
+$color1: #222;
+$color2: #caf0f8;
+$color3: #48cae4;
+$color4: #0096c7;
+$color5: #03045e;
+
+
+$sizeTitle: 48px;
+$sizeNormal: 18px;
+
+$padding: 2%;
+$separation: 2%;
+
+/********************/
+
+*{
+    outline: none;
+}
+
+h2{
+    font-size: 30px;
+    font-family: $fontNormal;
+    padding: $padding;
+    color: $color4;
+    text-shadow: 1px 1px 1px #222;
+}
+li img{
+    border-radius: 30px;
+    padding: $padding;
+    transition: ease-out 0.5s 0s;
+    width: 45%;
+}
+li{
+    list-style: none;
+    border: 1px inset rgba(51, 51, 51, 0.514);
+    border-radius: 20px;
+    margin: 0px auto;
+    width: 50%;
+    margin-bottom: 10px;
+
+    #miniShoe{
+        float: left;
+        font-size: 20px;
+        transform: rotate(20deg);
+    }
+    #bRemove{
+        border-radius: 20px;
+        border-style: none;
+        float: right;
+        margin-bottom: auto;
+        transition-duration: 0.5s;
+        outline: none;
+    }#bRemove:hover{
+        background-color: transparent;
+        transform: scale(1.2);
+        transform: rotate(360deg);
+        color: red;
+    }
+}
+
+
+
+
+.nm2{
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 79px;
+    background: rgba(34, 34, 34, 0.808);
+    box-shadow: inset -2px 2px 1px #4f515394, inset 5px -5px 1px #3b383881;
+    margin: 20px auto;
+}
+
+.icon{
+    overflow: hidden;
+    width: 60px;
+    padding: 10px;
+    margin: 4px;
+}
+
+
+
+.price{
+    color: #3e9c35;
+
+}

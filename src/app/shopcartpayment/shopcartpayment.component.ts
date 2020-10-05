@@ -1,5 +1,6 @@
-import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild} from '@angular/core';
 import * as globalVars from 'src/assets/globalVars';
+import { ItemInPaymentComponent } from '../item-in-payment/item-in-payment.component';
 
 @Component({
   selector: 'app-shopcartpayment',
@@ -8,20 +9,16 @@ import * as globalVars from 'src/assets/globalVars';
 })
 export class ShopcartpaymentComponent implements OnInit {
 
-@ViewChild("item") item: ElementRef;
 
-removeItem(){
-  this.item.nativeElement.remove();
-}
+@ViewChild('child') child: ItemInPaymentComponent;
 
-cart: any[];
+cart = [];
 
-  constructor(private renderer: Renderer2) {}
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {this.cart = globalVars.cart;}
+  ngAfterViewChecked(): void {this.cart = globalVars.cart;}
 
-    this.cart = globalVars.cart;
 
-  }
 
 }
