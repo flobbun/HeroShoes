@@ -2,13 +2,9 @@ import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/co
 import { ActivatedRoute } from '@angular/router';
 import { ShoesService } from '../services/shoes.service';
 import * as globalVars from 'src/assets/globalVars';
+import { IShoe } from 'src/app/i-shoe';
 
 
-interface Shoe {
-  name: string;
-  price: number;
-  img: string;
-}
 
 @Component({
   selector: 'app-item',
@@ -20,16 +16,16 @@ export class ItemComponent implements OnInit {
 @ViewChild("nItems") nItems: ElementRef;
 
 
-  shoes: any[] = [];
-  cart: any[];
+  shoes: IShoe;
+  cart: IShoe[];
 
   addItem(): any{
     let value: number = this.nItems.nativeElement.value;
     for (let i = 0; i < value; i++) {
       this.cart.push(this.shoes);
     }
-    console.log('CART> ', this.cart);
-    console.log('globalCART> ', globalVars.cart);
+    // console.log('CART> ', this.cart);
+    // console.log('globalCART> ', globalVars.cart);
   }
 
   constructor(private route: ActivatedRoute, private _service: ShoesService) { }
@@ -39,12 +35,12 @@ export class ItemComponent implements OnInit {
 
 
     this.cart = globalVars.cart;
-    console.log('CART> ', this.cart);
-    console.log('globalCART> ', globalVars.cart);
+    // console.log('CART> ', this.cart);
+    // console.log('globalCART> ', globalVars.cart);
 
     this.route.params.subscribe(params=>{
       this._service.getShoes()
-      .subscribe((res: Shoe) => {
+      .subscribe((res: IShoe) => {
         this.shoes = res[params['id']];
       });
     })

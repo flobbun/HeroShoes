@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import * as globalVars from 'src/assets/globalVars';
 
 @Injectable({
   providedIn: 'root'

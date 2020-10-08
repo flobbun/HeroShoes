@@ -2,6 +2,9 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ShoesService } from '../services/shoes.service';
 import * as globalVars from 'src/assets/globalVars';
 
+import { IShoe } from 'src/app/i-shoe';
+
+
 @Component({
   selector: 'app-catalogue',
   templateUrl: './catalogue.component.html',
@@ -9,7 +12,7 @@ import * as globalVars from 'src/assets/globalVars';
 })
 export class CatalogueComponent implements OnInit {
 
-shoes: any[];
+shoes: IShoe[];
 filterSearch = '';
 
 

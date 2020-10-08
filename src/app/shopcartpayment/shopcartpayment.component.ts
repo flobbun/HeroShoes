@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2, ViewChild} from '@angular/core';
 import * as globalVars from 'src/assets/globalVars';
 import { ItemInPaymentComponent } from '../item-in-payment/item-in-payment.component';
+import { IShoe } from '../i-shoe';
 
 @Component({
   selector: 'app-shopcartpayment',
@@ -12,12 +13,12 @@ export class ShopcartpaymentComponent implements OnInit {
 
 @ViewChild('child') child: ItemInPaymentComponent;
 
-cart = [];
+cart: IShoe[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {this.cart = globalVars.cart;}
-  ngAfterViewChecked(): void {this.cart = globalVars.cart;}
+  ngOnInit(): void { this.cart = globalVars.cart; }
+  ngAfterViewChecked(): void { this.cart = globalVars.cart; }
 
 
 

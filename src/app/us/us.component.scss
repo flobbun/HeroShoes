@@ -62,6 +62,15 @@ section{
 
 .nm2:hover{
     transform: scale(1.02);
+    background: rgba(34, 34, 34, 0.466);
+    
+    h2{
+        text-shadow: 1px 3px 3px rgba(34, 34, 34, 0.534);
+    }
+    p{
+        text-shadow: 3px 3px 3px rgba(34, 34, 34, 0.418);
+
+    }
 }
 
 .nm{

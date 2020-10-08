@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import * as globalVars from 'src/assets/globalVars';
-import { Subscription, Observable, BehaviorSubject } from 'rxjs';
+import { IShoe } from '../i-shoe';
 
 @Component({
   selector: 'app-shopcart',
@@ -9,7 +9,7 @@ import { Subscription, Observable, BehaviorSubject } from 'rxjs';
 })
 export class ShopcartComponent implements OnInit {
 
-cart: any[];
+cart: IShoe[] = [];
 
   constructor() {
 

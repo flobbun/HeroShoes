@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var jQuery:any;
-declare var $:any;
+declare var jQuery: any;
+declare var $: any;
 
 
 @Component({
@@ -22,8 +22,8 @@ export class MainsectionComponent implements OnInit {
 
     $('.carousel').carousel({
       interval: 4000
-    })
-    
+    });
+
   }
 }
 

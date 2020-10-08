@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewChild, ComponentRef, ElementRef, Renderer2 } from '@angular/core';
 import * as globalVars from 'src/assets/globalVars';
+import { IShoe } from '../i-shoe';
 
 @Component({
   selector: 'app-item-in-payment',
@@ -12,35 +13,29 @@ export class ItemInPaymentComponent implements OnInit {
 @ViewChild('bRemove') bRemove: ElementRef;
 
 @Input() id: number;
-@Input() shoe: Array<any>;
+@Input() shoe: IShoe;
 
 
 removeItem(): void{
-  let index = globalVars.cart.indexOf(this.id);
+  const index = globalVars.cart.indexOf(this.id);
   globalVars.cart.splice(index);
   this.item.nativeElement.remove();
   console.log(globalVars.cart);
 
   this.shoe = null;
 
-
 }
 
-  
-
-
-  constructor(public el: ElementRef, public renderer: Renderer2) { 
 
 
 
-  }
+  constructor(public el: ElementRef, public renderer: Renderer2) {}
 
   ngOnInit(): void {
+    // console.log(this.id);
 
-
-    console.log(this.id);
   }
 
- 
+
 
 }
