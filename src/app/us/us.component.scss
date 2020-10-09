@@ -17,6 +17,9 @@ $separation: 2%;
 /********************/
 
 section{
+    background-color:#E0E7EB;
+    margin-bottom: 280px;
+
     h3{
         padding: $padding;
         font-family: $fontTitle;
@@ -28,15 +31,13 @@ section{
 }
 
 .nm2{
-    animation-name: fadeIn;
-    animation-duration: 1s;
+    display: none;
     box-sizing: border-box;
-    overflow: hidden;
     padding: 10px;
     border-radius: 79px;
     background: rgba(34, 34, 34, 0.808);
     box-shadow: inset -2px 2px 1px #4f515394, inset 5px -5px 1px #3b383881;
-    margin: 20px auto;
+    margin: 20px 0.8px;
     width: 400px;
     transition-duration: 1s;
     h2{
@@ -45,6 +46,7 @@ section{
         font-family: $fontTitle;
         font-size: 50px;
         color: $color4;
+        padding: 2px;
 
         .icon{
             width: 120px;
@@ -56,29 +58,172 @@ section{
         text-shadow: 0.5px 0.5px 0.5px black;
         font-size: 20px;
         font-family: $fontNormal;
-        padding: $padding;
+        padding: $padding+2;
     }
 }
 
 .nm2:hover{
     transform: scale(1.02);
-    background: rgba(34, 34, 34, 0.466);
-    
+    background-color: #48cae4a1;
+    box-shadow: inset -5px 5px 1px #2021224f, inset 5px -5px 1px rgba(34, 34, 34, 0.226);
+
     h2{
-        text-shadow: 1px 3px 3px rgba(34, 34, 34, 0.534);
+        animation: getbig 0.3s forwards;
+        animation-timing-function: linear;
     }
     p{
-        text-shadow: 3px 3px 3px rgba(34, 34, 34, 0.418);
-
+        color: rgba(0, 0, 0, 0.904);
+        text-shadow: 1px 1px 1px $color4;
     }
+}
+
+
+
+#us{
+    margin: 50px 0px;
+    height: 900px;
+    background-image: url("/assets/img/us-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-shadow: inset -5px 5px 1px #9b9fa281, inset 5px -5px 1px #ffffff7c;
+    flex-wrap: nowrap;
 }
 
 .nm{
     box-sizing: border-box;
-    overflow: hidden;
     margin-top: 120px;
     padding: $padding;
     border-radius: 79px;
-    background: #e0e7eb;
     box-shadow: inset -5px 5px 1px #9b9fa2, inset 5px -5px 1px #ffffff;
+}
+
+
+
+@keyframes getbig{
+    to{
+        color: #333;
+        font-size: 55px;
+        text-shadow: 3px 2px 3px $color5;
+    }
+}
+
+
+
+
+//=====================MediaQueris==========================//
+$large: 992px;
+$medium: 768px;
+$small: 576px; 
+$ultrasmall: 280px;
+
+@media (min-width: $large) and (max-width: 1280px){
+    #us{
+        .nm2{
+            h2{
+                font-size: 40px;
+            }
+
+        }
+
+    }
+
+
+    #fast:hover::after, #quality:hover::after, #trust:hover::after{
+        background-position: center;
+        background-repeat: no-repeat;
+        image-rendering: pixelated;
+        background-size: 180%;
+        width: 80px;
+        height: 80px;
+        border-radius: 80%;
+        z-index: 1000;
+        content: "";    
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        opacity: 50%;
+        animation: fadeIn 2s forwards;
+    }
+    #fast:hover::after{
+        background-image: url("/assets/img/us-img2.jpg");
+    }
+    #quality:hover::after{
+        background-image: url("/assets/img/us-img1.jpg");  
+    }
+    #trust:hover::after{
+        background-image: url("/assets/img/us-img3.jpg"); 
+    }
+}
+@media (min-width: $medium) and (max-width: $large){
+    #us{
+        height: 600px;
+        overflow: none;
+    }
+    .nm2{
+        width: 30%;
+        height: 90%;
+
+        h2{
+            font-size: 30px;
+        }
+
+        .icon{
+            width: 50px;
+            height: 50px;
+            margin: 0px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+}
+@media (min-width: $small) and (max-width: $medium){
+    #us{
+        height: 600px;
+        overflow: none;
+    }
+    .nm2{
+        width: 30%;
+        height: 90%;
+
+        h2{
+            font-size: 30px;
+        }
+
+        .icon{
+            width: 50px;
+            height: 50px;
+            margin: 0px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+
+}
+@media (min-width: $ultrasmall) and (max-width: $small){
+    #us{
+        height: 600px;
+        overflow: none;
+    }
+    .nm2{
+        overflow-y: auto;
+        width: 34%;
+        height: 94%;
+
+        h2{
+            font-size: 24px;
+        }
+
+        .icon{
+            width: 50px;
+            height: 50px;
+            margin: auto 0px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+
 }

@@ -21,7 +21,7 @@ removeItem(): void{
   const index = globalVars.cart.indexOf(this.id);
   globalVars.cart.splice(index);
   this.item.nativeElement.remove();
-  
+
   this.shoe = null;
   this.router.navigate(['catalogue']);
 

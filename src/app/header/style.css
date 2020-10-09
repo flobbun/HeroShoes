@@ -69,4 +69,21 @@
 .icon {
   width: 60px; }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  header {
+    padding-bottom: 1%; }
+    header ul {
+      width: 40% !important; }
+    header .icon {
+      width: 10%;
+      height: 10%; } }
+@media (min-width: 576px) and (max-width: 768px) {
+  header {
+    padding-bottom: 1%; }
+    header ul {
+      width: 40% !important; }
+    header .icon {
+      width: 10%;
+      height: 10%; } }
+
 /*# sourceMappingURL=style.css.map */

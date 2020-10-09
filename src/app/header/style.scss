@@ -16,9 +16,9 @@ $separation: 2%;
 
 /*-------------*/
 @keyframes glowing {
-    0% { background-position: 0 0; 
-    background-color: #222;
-
+    0% { 
+        background-position: 0 0; 
+        background-color: #222;
     }
     10%{
         background-color: rgb(46, 46, 46);
@@ -36,11 +36,13 @@ $separation: 2%;
         color: $color3;
 
     }
-    50% { background-position: 400% 0; 
+    50% { 
+        background-position: 400% 0; 
         background-color: rgb(31, 30, 30);
         color: $color4;
     }
-    100% { background-position: 0 0; 
+    100% { 
+        background-position: 0 0; 
         background-color: rgb(26, 25, 25);
     }
 }
@@ -108,9 +110,50 @@ $separation: 2%;
 
 
 
-
-
 /*****Custom Classes*******/
 .icon{
     width: 60px;
+}
+
+
+//=====================MediaQueris==========================//
+$large: 992px;
+$medium: 768px;
+$small: 576px; 
+$ultrasmall: 280px;
+
+
+@media (min-width: $medium) and (max-width: $large){
+    header{
+        padding-bottom: 1%;
+        ul{
+            width: 40% !important;
+
+        }
+
+        .icon{
+            width: 10%;
+            height: 10%;
+        }
+    }
+}
+
+@media (min-width: $small) and (max-width: $medium){
+    header{
+        padding-bottom: 1%;
+        ul{
+            width: 40% !important;
+
+        }
+
+        .icon{
+            width: 10%;
+            height: 10%;
+        }
+    }
+
+}
+@media (min-width: $ultrasmall) and (max-width: $small){
+
+
 }
