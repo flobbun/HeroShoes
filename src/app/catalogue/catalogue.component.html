@@ -10,7 +10,7 @@
 
     <section class="row nm">
 
-        <div *ngFor="let shoe of shoes | filter:filterSearch, index as i " class="p-4">
+        <div *ngFor="let shoe of shoes | filter:filterSearch, index as i " class="p-4 item">
             <div class="container">
                 <h2> {{shoe.name}} <small class="price">{{shoe.price}}$</small></h2>
                 <img src={{shoe.img}} [routerLink]="['/item',i]" alt="">

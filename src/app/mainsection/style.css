@@ -31,4 +31,17 @@ section {
   background: #e0e7eb;
   box-shadow: inset -5px 5px 1px #9b9fa2, inset 5px -5px 1px #ffffff; }
 
+@media (min-width: 576px) and (max-width: 768px) {
+  h3 {
+    font-size: 24px !important;
+    text-align: center; } }
+@media (min-width: 280px) and (max-width: 576px) {
+  h3 {
+    text-align: center;
+    font-size: 16px !important; }
+
+  p {
+    font-size: 14px;
+    padding: 2%; } }
+
 /*# sourceMappingURL=style.css.map */

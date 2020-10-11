@@ -129,6 +129,34 @@ section{
     box-shadow: inset -2px 2px 2px white, inset 2px -1px 1px white;
 }
 
+.item{
+    width: 25%;
+    padding: 1%;
+    margin: 1.8%;
+}
+  
+//=====================MediaQueris==========================//
+$large: 992px;
+$medium: 768px;
+$small: 576px; 
+$ultrasmall: 280px;
 
-  
-  
+@media (min-width: $medium) and (max-width: $large){
+
+}
+
+@media (min-width: $small) and (max-width: $medium){
+ .item{
+     width: 50%;
+     padding: 0%;
+     margin: 0%;
+ }
+}
+@media (min-width: $ultrasmall) and (max-width: $medium){
+ .item{
+     width: 100%;
+     padding: 0.5%;
+     margin: 0.5%;
+ }
+
+}

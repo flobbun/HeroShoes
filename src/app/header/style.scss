@@ -55,7 +55,6 @@ $separation: 2%;
     background-color: #222;
     color: white;
     font-family: $fontNormal;
-    overflow: hidden;
     height: 120px;
     border-radius: 0px 0px 1000px 1000px;
 
@@ -74,7 +73,26 @@ $separation: 2%;
         font-size: $sizeTitle;
     }
 
-    ul{
+    
+
+}
+
+
+
+/*****Custom Classes*******/
+.icon{
+    width: 60px;
+}
+
+
+//=====================MediaQueris==========================//
+$large: 992px;
+$medium: 768px;
+$small: 576px; 
+$ultrasmall: 280px;
+
+@media (min-width: $medium){
+ul{
         text-align: center;
         width: 50%;
         margin: auto;
@@ -105,30 +123,19 @@ $separation: 2%;
         }
         
     }
-
 }
-
-
-
-/*****Custom Classes*******/
-.icon{
-    width: 60px;
-}
-
-
-//=====================MediaQueris==========================//
-$large: 992px;
-$medium: 768px;
-$small: 576px; 
-$ultrasmall: 280px;
-
 
 @media (min-width: $medium) and (max-width: $large){
     header{
-        padding-bottom: 1%;
-        ul{
-            width: 40% !important;
 
+        ul{
+
+            width: 10% !important;
+            li{
+                margin-top: 1px !important;
+                padding-top: 1px !important;
+                width: 3000%;
+            }
         }
 
         .icon{
@@ -153,7 +160,76 @@ $ultrasmall: 280px;
     }
 
 }
-@media (min-width: $ultrasmall) and (max-width: $small){
+@media (min-width: $ultrasmall) and (max-width: $medium){
 
+    #mainHeader{
+        border-radius: 10px 10px 40px 40px;
+        margin: 0px;
+    }
+
+    header{
+
+        h1{
+            margin-right: 120px;
+            font-size: 40px !important;
+            padding-left: 20px;
+        }
+        .icon{
+            width: 50px;
+        }
+
+        #navbarPc{
+            display: none;
+        }
+
+        #toggler{
+            margin: auto;
+            width: 50px !important;
+            height: 50px;
+            background-color: #222;
+            box-shadow: 1px 1px 1px #111;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: $sizeNormal;
+            transition-duration: 0.6s;
+    
+
+    }#toggler:hover{
+        box-shadow: -2px -2px 6px 0.6px $color3;
+    }
+    
+    li{
+        padding: $padding;
+        a{
+            color: $color4;
+            box-shadow: 1px 1px 4px 1px $color4;
+            border-radius: 20px;
+            text-align: center;
+            width: 80px;
+            background-color: $color1;
+            transition-duration: 0.5s;
+        }
+    }
+    li:hover{
+        transform: scale(1.1);
+    }
+    
+    #toggler:after{
+        content:"";
+        margin: auto auto;
+        width: 38px;
+        height: 38px;
+        position: absolute;
+        background-size: 100%;
+        background-image: url("/assets/img/menu.svg");
+        color: white;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }#toggler:hover::after{
+        transform: scale(1.1) rotate(360deg);
+        opacity: 90%;
+    }
+
+}
 
 }

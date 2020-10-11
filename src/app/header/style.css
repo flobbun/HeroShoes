@@ -26,7 +26,6 @@
   background-color: #222;
   color: white;
   font-family: "Sriracha", cursive;
-  overflow: hidden;
   height: 120px;
   border-radius: 0px 0px 1000px 1000px;
   box-shadow: inset 7px 7px 10px #222, inset -7px -7px 10px #111;
@@ -38,11 +37,17 @@
     margin-right: 2%;
     text-shadow: 1px 5px black;
     font-size: 48px; }
-  #mainHeader ul {
+
+/*****Custom Classes*******/
+.icon {
+  width: 60px; }
+
+@media (min-width: 768px) {
+  ul {
     text-align: center;
     width: 50%;
     margin: auto; }
-    #mainHeader ul li {
+    ul li {
       width: 100px;
       background-color: #222;
       box-shadow: 1px 1px 1px #111;
@@ -52,31 +57,28 @@
       display: inline-flex;
       margin: 2%;
       transition-duration: 0.6s; }
-      #mainHeader ul li a, #mainHeader ul li a:visited {
+      ul li a, ul li a:visited {
         padding: 2%;
         margin: auto;
         color: inherit;
         text-decoration: none; }
-    #mainHeader ul li:hover {
+    ul li:hover {
       box-shadow: -1px -1px 0px #424141;
       animation: glowing 2s 0s;
       color: #0096c7;
       text-shadow: 1px 1px 1px #03045e;
       font-size: 19px;
-      cursor: pointer; }
-
-/*****Custom Classes*******/
-.icon {
-  width: 60px; }
-
+      cursor: pointer; } }
 @media (min-width: 768px) and (max-width: 992px) {
-  header {
-    padding-bottom: 1%; }
-    header ul {
-      width: 40% !important; }
-    header .icon {
-      width: 10%;
-      height: 10%; } }
+  header ul {
+    width: 10% !important; }
+    header ul li {
+      margin-top: 1px !important;
+      padding-top: 1px !important;
+      width: 3000%; }
+  header .icon {
+    width: 10%;
+    height: 10%; } }
 @media (min-width: 576px) and (max-width: 768px) {
   header {
     padding-bottom: 1%; }
@@ -85,5 +87,56 @@
     header .icon {
       width: 10%;
       height: 10%; } }
+@media (min-width: 280px) and (max-width: 768px) {
+  #mainHeader {
+    border-radius: 10px 10px 40px 40px;
+    margin: 0px; }
+
+  header h1 {
+    margin-right: 120px;
+    font-size: 40px !important;
+    padding-left: 20px; }
+  header .icon {
+    width: 50px; }
+  header #navbarPc {
+    display: none; }
+  header #toggler {
+    margin: auto;
+    width: 50px !important;
+    height: 50px;
+    background-color: #222;
+    box-shadow: 1px 1px 1px #111;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 18px;
+    transition-duration: 0.6s; }
+  header #toggler:hover {
+    box-shadow: -2px -2px 6px 0.6px #48cae4; }
+  header li {
+    padding: 2%; }
+    header li a {
+      color: #0096c7;
+      box-shadow: 1px 1px 4px 1px #0096c7;
+      border-radius: 20px;
+      text-align: center;
+      width: 80px;
+      background-color: #222;
+      transition-duration: 0.5s; }
+  header li:hover {
+    transform: scale(1.1); }
+  header #toggler:after {
+    content: "";
+    margin: auto auto;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    background-size: 100%;
+    background-image: url("/assets/img/menu.svg");
+    color: white;
+    transition-duration: 0.5s;
+    transition-timing-function: linear; }
+  header #toggler:hover::after {
+    transform: scale(1.1) rotate(360deg);
+    opacity: 90%; } }
 
 /*# sourceMappingURL=style.css.map */
