@@ -20,6 +20,7 @@ import { ItemComponent } from './item/item.component';
 
 // Pipes
 import { FilterPipe } from './pipes/filter.pipe';
+
 import { ShopcartComponent } from './shopcart/shopcart.component';
 import { ShopcartpaymentComponent } from './shopcartpayment/shopcartpayment.component';
 import { ItemInPaymentComponent } from './item-in-payment/item-in-payment.component';

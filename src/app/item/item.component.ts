@@ -5,7 +5,6 @@ import * as globalVars from 'src/assets/globalVars';
 import { IShoe } from 'src/app/i-shoe';
 
 
-
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
@@ -13,30 +12,34 @@ import { IShoe } from 'src/app/i-shoe';
 })
 export class ItemComponent implements OnInit {
 
+// ========== VARS =========== //
+
 @ViewChild("nItems") nItems: ElementRef;
 
 
-  shoes: IShoe;
-  cart: IShoe[];
+
+
+shoes: IShoe;
+cart: IShoe[];
+
+
+
+// =========================== //
 
   addItem(): any{
     let value: number = this.nItems.nativeElement.value;
     for (let i = 0; i < value; i++) {
       this.cart.push(this.shoes);
     }
-    // console.log('CART> ', this.cart);
-    // console.log('globalCART> ', globalVars.cart);
+
   }
 
   constructor(private route: ActivatedRoute, private _service: ShoesService) { }
 
 
   ngOnInit(): void {
-
-
     this.cart = globalVars.cart;
-    // console.log('CART> ', this.cart);
-    // console.log('globalCART> ', globalVars.cart);
+
 
     this.route.params.subscribe(params=>{
       this._service.getShoes()
@@ -46,4 +49,9 @@ export class ItemComponent implements OnInit {
     })
   }
 
+
+
+
 }
+
+
